@@ -12,57 +12,57 @@ general {
 }
 
 order += "wireless wlp2s0"
-order += "battery 0"
 order += "volume master"
+order += "memory"
 order += "disk /"
 order += "load"
+order += "battery 0"
 order += "cpu_temperature 0"
-order += "memory"
 order += "tztime local"
 
 wireless wlp2s0 {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+        format_up = " %quality @ %essid"
+	format_down = " "
 }
 
 battery 0 {
 	format = "%status %percentage %remaining"
 	format_down = "No battery"
 	status_chr = "⚡"
-	status_bat = "🔋"
+	status_bat = " "
 	status_unk = "?"
-	status_full = "☻"
+	status_full = " "
 	path = "/sys/class/power_supply/BAT%d/uevent"
 	low_threshold = 10
 }
 
 disk "/" {
-        format = "%avail"
+        format = "  %avail"
 }
 
 load {
-        format = "💻 %1min %5min %15min"
+        format = "  %1min %5min %15min"
 }
 
 memory {
-        format = "%used"
+        format = "  %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
 
 volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
+        format = "  %volume"
+        format_muted = " (%volume)"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
 }
 
 cpu_temperature 0 {
-	format = "🌡️ %degrees °C"
+	format = "  %degrees °C"
 	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "  %d-%m-%Y %H:%M"
 }
