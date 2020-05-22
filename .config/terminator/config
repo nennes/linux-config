@@ -4,7 +4,9 @@
   paste = <Primary>v
 [profiles]
   [[default]]
+    background_color = "#fdf6e3"
     cursor_color = "#aaaaaa"
+    foreground_color = "#657b83"
     copy_on_selection = True
 [layouts]
   [[default]]
