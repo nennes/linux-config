@@ -103,4 +103,4 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/snap/bin:/home/inennes/.cargo/bin/:$PATH"
 
 # Show nice welcome
-figlet -ct "Welcome back master Yianni"
+# figlet -ct "Welcome back master Yianni"
