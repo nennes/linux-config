@@ -226,6 +226,9 @@ exec --no-startup-id ~/.fehbg
 # Firefox
 exec --no-startup-id firefox
 
+# Redshift
+exec --no-startup-id redshift
+
 # Styles
 client.focused #dd4814 #dd4814 #ffffff #902a07
 client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750
